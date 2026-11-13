@@ -1,5 +1,4 @@
-# EFREI-AWP
-
+# Advanced Web Programming:
 Advanced Web Programming – Course materials, code examples, and references.
 
 This repository contains my teaching materials, commented code examples, practical demonstrations, and learning resources for students enrolled in the Advanced Web Programming course.
@@ -22,16 +21,24 @@ The materials are organized by topic and include detailed explanations, commente
 - Sequelize
 
 # Main Course Topics:
-- Node.js Fundamentals
-- Express.js Basics
-- HTTP, REST APIs and CRUD Operations
-- MySQL and SQL Fundamentals
-- Sequelize ORM (Object-Relational Mapping)
-- Vue.js 3, Vue Router and API Integration
-- Authentication, Password Hashing and Authorization
-- Project Development and Integration
+- **Node.js Introduction**
+  - Node fundamentals and modules
+- **Express.js Basics**
+  - Server, routing, parameters, middleware
+- **REST API and CRUD**
+  - HTTP methods, requests, responses and CRUD
+- **MySQL**
+  - Database and SQL fundamentals
+- **Sequelize**
+  - ORM, models and database operations
+- **Vue Integration**
+  - Vue Router and API integration
+- **Vue Authentication**
+  - Authentication, password hashing and authorization
+- **Project Guidance**
+  - Building, integrating and troubleshooting the project
 
-# Repository Folders Strucure:
+# Repository Folders Structure:
 - EFREI-AWP
   - README.md
   - 01-node-intro
@@ -68,8 +75,8 @@ The materials are organized by topic and include detailed explanations, commente
 
 ## Development Tools:
 - [npm-Nodemon](https://www.npmjs.com/package/nodemon)
-- [Nodemon Documentation](https://nodemon.io/)
-- [Thunder Client Documentation](https://docs.thunderclient.com/)
+- [Nodemon](https://nodemon.io/)
+- [Thunder Client](https://docs.thunderclient.com/)
 
 ## My Related Repositories:
 - [JavaScript Introduction](https://github.com/anmarjarjees/javascript-code)
