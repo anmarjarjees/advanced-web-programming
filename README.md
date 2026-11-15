@@ -5,11 +5,9 @@ This repository contains my teaching materials, commented code examples, practic
 
 This repository can also be used as an additional reference for setting up, building, and running our applications using GitHub Codespaces instead of working on local machines. Please refer to the final sections of this README for links to official online documentation and my other detailed GitHub repositories.
 
-The materials are organized by topic and include detailed explanations, commented code examples, and practical exercises.
-
 **Note:** We are starting with the second part of the course, as some sections from the first part, covering HTML, CSS, JavaScript review, and Vue.js, have already been covered in previous sessions.
 
-# Technologies to be used 
+# Technologies to be used:
 - HTML and CSS
 - JavaScript (ES6+)
 - Node.js
@@ -39,23 +37,112 @@ The materials are organized by topic and include detailed explanations, commente
   - Building, integrating and troubleshooting the project
 
 # Repository Folders Structure:
-- EFREI-AWP
+- advanced-web-programming
   - README.md
   - 01-node-intro
-  - 02-express-basic
+  - 02-express-basics
   - 03-rest-api-crud
   - 04-mysql
   - 05-sequelize
   - 06-vue-integration
   - 07-vue-authentication
   - 08-project-guidance
-  - resources
+ 
+ *All folders will be added gradually*
+
+## Express Package
+Notice that the Express package was initially installed inside the `02-express-basics` folder because it was the first lecture to introduce the Express framework. Later, we also installed Express in the root folder, `advanced-web-programming`, because we need to use it throughout the remaining lectures.
+
+**To remove Express from a sub-folder:**
+- Navigate to that folder
+- Run this command:
+
+```bash
+npm uninstall express
+```
+
+*Notice that running `npm uninstall express` inside `02-express-basics` removes Express from that folder's `package.json` and its local dependencies. It does not remove the Express package installed in the root folder.*
+
+# GitHub Repository and Codespaces Workspace Folder
+When we create a new GitHub repository and start a Codespace for it, the project folder name will normally be the same as the repository name. However, if we rename the GitHub repository after creating our Codespaces workspace, the existing project folder will not be renamed automatically. It will keep its original name.
+
+There is no problem with keeping the original folder name. However, if we want the project folder name to match the new repository name, we need to rename it manually. 
+
+There are different ways to do this. Below are simple steps using the terminal and the VS Code Explorer.
+ 
+1) Renaming the folder using the terminal:
+When we open the terminal, it shows our current working directory. For example:
+```bash
+@username ➜ /workspaces/abc-crud-project (main) $ 
+```
+
+First, we need to move to the parent directory (workspaces) using the following command:
+```bash
+cd ..
+```
+cd stands for Change Directory. The .. refers to the parent directory.
+
+Now, we should be in:
+```bash
+@username ➜ /workspaces $
+```
+
+Next, rename the project folder using the Linux mv command, which is used to move or rename files and folders.
+
+In the following example, we are renaming the project folder from abc-crud-project to java-crud-operations:
+```bash
+mv abc-crud-project java-crud-operations
+```
+
+Notice:
+- The mv command normally produces no output when successful
+- Renaming the folder does not delete its contents or affect our Git repository. The hidden .git folder moves along with the project folder
+- We do not need to stage, commit, or push our changes before renaming the folder
+
+
+**Other useful Linux commands:**
+
+- Check the current location by typing "pwd" (Printing Working Directory):
+```bash
+pwd
+```
+
+- List all the files including the hidden ones, ls for list, while -la:
+```bash
+ls -la
+```
+- ls => Lists files and directories
+- -l => Displays the results in a detailed (long) format
+- -a => Includes hidden files and directories
+
+**For more details about essential Linux commands, you can review my repository: ["Linux CLI"](https://github.com/anmarjarjees/linux-cli).**
+
+2) Refreshing the VS Code Explorer to display the renamed folder:
+After successfully renaming the folder using the terminal, VS Code may still be using the old folder location as its current workspace. As a result, the Explorer may continue showing the old folder name, or it may not display our project files correctly.
+
+To open the renamed folder:
+
+- Click **File** in the top menu
+- Select **Open Folder...**
+- Select the newly renamed project folder and open it
+
+VS Code will now use the renamed folder as our workspace, and the Explorer should display our project files and folders again.
+
+
+**Alternatively, we can try refreshing the VS Code window:**
+
+- Open the Command Palette:
+  - Press Ctrl + Shift + P
+  - Type Developer: Reload Window
+  - Select the command
+
+**Note:** If reloading the window does not refresh the Explorer correctly, we need to use File => Open Folder... as explained above.
+
+----
 
 # References, Resources, and Credits:
 ## Official Documentations:
 - [Node.js Documentation](https://nodejs.org/en/learn)
-- [Node.js API Reference](https://nodejs.org/api/)
-- [Node.js Examples](https://github.com/nodejs/examples)
 - [Express.js Documentation](https://expressjs.com/)
 - [MySQL Documentation](https://dev.mysql.com/doc/)
 - [Sequelize Documentation](https://sequelize.org/docs/v6/)
@@ -63,36 +150,24 @@ The materials are organized by topic and include detailed explanations, commente
 - [Vue.js Tutorial](https://vuejs.org/tutorial/)
 - [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html)
 - [Vue Router Documentation](https://router.vuejs.org/)
-- [MDN Web Docs - Glossary](https://developer.mozilla.org/en-US/docs/Glossary)
-
-## Learning Resources:
 - [MDN-Express and Node.js Tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - [MDN-Local Library Website Tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
 - [MDN-Getting Started with Vue](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
-- [freeCodeCamp News](https://www.freecodecamp.org/news/)
-- [Pluralsight Blog](https://www.pluralsight.com/blog/)
-- [Vue Mastery](https://www.vuemastery.com/)
 
 ## Development Tools:
 - [npm-Nodemon](https://www.npmjs.com/package/nodemon)
 - [Nodemon](https://nodemon.io/)
-- [Thunder Client](https://docs.thunderclient.com/)
+- [Postman](https://www.postman.com/)
 
 ## My Related Repositories:
 - [JavaScript Introduction](https://github.com/anmarjarjees/javascript-code)
-- [JavaScript Full-Stack Programming Fundamentals](https://github.com/anmarjarjees/fssd-javascript)
 - [ECMAScript 6 (ES6) Essentials](https://github.com/anmarjarjees/ECMAScript6)
-- [API Integration (Google Maps, GitHub, EmailJS)](https://github.com/anmarjarjees/fssd-api-all-together)
 - [Node.js Introduction](https://github.com/anmarjarjees/node.js-start)
 - [Express.js Basics](https://github.com/anmarjarjees/express-basics)
+- [Node and Express Demo](https://github.com/anmarjarjees/des-node-express-demo)
+- [Express.js Website Demo](https://github.com/anmarjarjees/express-node-website)
 - [TypeScript Introduction](https://github.com/anmarjarjees/TypeScript-Intro)
 - [JavaScript Frameworks Overview](https://github.com/anmarjarjees/js-frameworks)
 - [Vue.js Fundamentals](https://github.com/anmarjarjees/vue.js-intro)
 - [Vue.js Todo App](https://github.com/anmarjarjees/vue-todo-app)
 - [Vue.js Basic Application](https://github.com/anmarjarjees/vue.js-basic-app)
-- [Node and Express Demo](https://github.com/anmarjarjees/des-node-express-demo)
-- [Express.js Website Demo](https://github.com/anmarjarjees/express-node-website)
-- [Introduction to MongoDB Query Language (MQL) Using VS Code](https://github.com/anmarjarjees/mongodb-vscode)
-- [MongoDB, Express, Node.js (CRUD Guide)](https://github.com/anmarjarjees/men-crud-guide)
-- [MongoDB, Express, Node.js Starter Kit](https://github.com/anmarjarjees/men-starter-kit)
-- [Node.js & MongoDB Integration](https://github.com/anmarjarjees/node.js-mongodb)

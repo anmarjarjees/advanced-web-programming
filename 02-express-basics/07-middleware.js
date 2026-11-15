@@ -183,7 +183,7 @@ Link: https://github.com/anmarjarjees/express-basics/blob/main/index6.js
 
 // Step#06: Starting the Express server
 app.listen(PORT, () => {
-    console.log(`Express server is running on port ${PORT}`);
+    console.log(`Our app listening on http://localhost:${PORT}`);
 });
 
 /*

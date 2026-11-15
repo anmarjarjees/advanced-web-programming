@@ -127,7 +127,7 @@ Types of req properties:
 
 // Step#05: Starting the Express server
 app.listen(PORT, () => {
-    console.log(`Express server is running on port ${PORT}`);
+    console.log(`Our app listening on http://localhost:${PORT}`);
 });
 
 /*

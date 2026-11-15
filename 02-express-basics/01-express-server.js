@@ -59,9 +59,9 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     // Using ES6 Template Literal to include the PORT value in our logged message:
     // Link (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-    console.log(`Example app listening on port ${PORT}`);
-    // OR in our local machine to simply click the URL:
-    console.log(`Example app listening on http://localhost:${PORT}`);
+    console.log(`Our app listening on port ${PORT}`);
+    // OR simply click the URL:
+    console.log(`Our app listening on http://localhost:${PORT}`);
 });
 /*
 The listen() method starts the server
