@@ -137,6 +137,8 @@ app.post("/api/courses", (req, res) => {
     /*
     Notice that the express.json() middleware allows Express
     to read the incoming JSON data through req.body
+    based on this code line that we wrote above: 
+        > app.use(express.json()); ==> Middleware to parse incoming JSON request bodies
     */
 
     // Creating a new course (object)
@@ -195,6 +197,7 @@ app.put("/api/courses/:id", (req, res) => {
     */
 });
 
+// DELETE: Using app.delete() to handle HTTP DELETE requests
 // Step#09: DELETE => Deleting an existing course
 app.delete("/api/courses/:id", (req, res) => {
 
@@ -251,7 +254,6 @@ We can practise these methods using tools such as:
 These extensions:
 - Both of these tools, need to have an account. You can open an account using any email
 - Allow us to test our REST API without building a frontend
-
 
 NOTE:
 > Remember that our data is stored in an in-memory array

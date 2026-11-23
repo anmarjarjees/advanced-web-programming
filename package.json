@@ -21,7 +21,7 @@
   "license": "ISC",
   "author": "Anmar Jarjees",
   "type": "module",
-  "main": "03-rest-api-crud/01-rest-api-intro.js",
+  "main": "03-rest-api-crud/02-api-methods.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon"
